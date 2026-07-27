@@ -116,47 +116,65 @@ Some of the key DAX measures created for this project include:
 ```DAX
 Total Employees =
 COUNTROWS('WA_Fn-UseC_-HR-Employee-Attrition')
+
 Employees Left =
 CALCULATE(
     COUNTROWS('WA_Fn-UseC_-HR-Employee-Attrition'),
     'WA_Fn-UseC_-HR-Employee-Attrition'[Attrition] = "Yes"
 )
+
 Active Employees =
 [Total Employees] - [Employees Left]
+
 Attrition Rate =
 DIVIDE(
     [Employees Left],
     [Total Employees],
     0
 )
+
 Replacement Hiring Need =
 [Employees Left]
+
 Hiring Need % =
 DIVIDE(
     [Replacement Hiring Need],
     [Total Employees],
     0
 )
-Tools & Technologies
-Microsoft Power BI Desktop
-Power Query
-DAX (Data Analysis Expressions)
-Data Cleaning & Transformation
-Data Visualization
-GitHub
-Interactive Features
+```
+
+---
+
+## Tools & Technologies
+
+- Microsoft Power BI Desktop
+- Power Query
+- DAX (Data Analysis Expressions)
+- Data Cleaning & Transformation
+- Data Visualization
+- GitHub
+
+---
+
+## Interactive Features
 
 The dashboard includes:
 
-Interactive slicers
-Cross-filtering between visuals
-Department filtering
-Gender filtering
-Job Role filtering
-Synced slicers across report pages
-Page navigation buttons
-Interactive KPI cards and charts
-Project Structure
+- Interactive slicers
+- Cross-filtering between visuals
+- Department filtering
+- Gender filtering
+- Job Role filtering
+- Synced slicers across report pages
+- Page navigation buttons
+- Interactive KPI cards and charts
+
+---
+
+## Project Structure
+
+```text
 HR-Analytics-Dashboard/
 │
 ├── Screenshots/
@@ -166,12 +184,18 @@ HR-Analytics-Dashboard/
 │
 ├── HR_Analytics_Dashboard.pbix
 └── README.md
-Conclusion
+```
+
+---
+
+## Conclusion
 
 This HR Analytics Dashboard transforms employee data into interactive workforce insights using Power BI.
 
 The dashboard helps analyze employee attrition, satisfaction, performance, compensation, overtime, experience, and replacement hiring requirements. It provides HR teams with an interactive way to explore workforce trends and identify areas that may require attention.
 
-Internship Project
+---
 
-This project was developed as part of the CodeAlpha Power BI Internship – HR Analytics Task.
+## Internship Project
+
+This project was developed as part of the **CodeAlpha Power BI Internship – HR Analytics Task**.
